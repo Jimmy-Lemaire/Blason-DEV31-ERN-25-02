@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Google</title>
+  <link rel="icon" href="https://www.google.com/favicon.ico">
+  <style>
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Roboto, Arial, sans-serif;
+      background-color: #fff;
+    }
+
+    .fake-tabs-bar {
+      display: flex;
+      overflow-x: auto;
+      white-space: nowrap;
+      background-color: #f1f3f4;
+      padding: 0 10px;
+      height: 36px;
+      border-bottom: 1px solid #dcdcdc;
+    }
+
+    .tab {
+      display: flex;
+      align-items: center;
+      padding: 0 12px;
+      font-size: 13px;
+      color: #444;
+      min-width: 101px;
+      height: 100%;
+      border-right: 1px solid #ccc;
+      background-color: transparent;
+      transition: background 0.2s ease;
+    }
+
+    .tab:last-child {
+      border-right: none;
+    }
+
+    .tab:hover {
+      background-color: #e8eaed;
+      cursor: pointer;
+    }
+
+    .tab img {
+      width: 16px;
+      height: 16px;
+      margin-right: 6px;
+    }
+
+    .google-container {
+      text-align: center;
+      margin-top: 100px;
+    }
+
+    .google-logo {
+      width: 272px;
+    }
+
+    .search-box {
+      margin-top: 30px;
+    }
+
+    .search-input {
+      width: 60%;
+      max-width: 600px;
+      padding: 12px 20px;
+      font-size: 16px;
+      border: 1px solid #dcdcdc;
+      border-radius: 24px;
+      outline: none;
+      transition: box-shadow 0.2s ease;
+    }
+
+    .search-input:focus {
+      box-shadow: 0 1px 6px rgba(32, 33, 36, 0.28);
+      border-color: transparent;
+    }
+
+    .buttons {
+      margin-top: 20px;
+    }
+
+    .buttons input {
+      margin: 6px;
+      padding: 10px 20px;
+      font-size: 14px;
+      background-color: #f8f9fa;
+      border: 1px solid #f8f9fa;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: border 0.2s;
+    }
+
+    .buttons input:hover {
+      border: 1px solid #dadce0;
+    }
+
+    .favorites {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.favorite {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 72px;
+  color: #444;
+  text-decoration: none;
+  font-size: 13px;
+  transition: transform 0.2s;
+  cursor: pointer;
+}
+
+.favorite img {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  margin-bottom: 8px;
+  object-fit: cover;
+  background-color: #f1f3f4;
+}
+
+.favorite:hover {
+  transform: scale(1.1);
+}
+
+  </style>
+</head>
+<body>
+
+<div class="fake-tabs-bar" id="tabs">
+  <!-- JS inserts tabs here -->
+</div>
+
+<div class="google-container">
+  <img class="google-logo" src="https://cdn.discordapp.com/attachments/1382401418358554847/1384960188083339285/IMG_20250618_201707_723.jpg?ex=6854fcf0&is=6853ab70&hm=edcd70491ca37a4dcb9ff874955ee2c870885ea498cf17b01a691cfbd2ebfc17&" alt="Google">
+  <div class="search-box">
+    <input class="search-input" type="text" placeholder="The Codeurs Rangers">
+  </div>
+  <div class="buttons">
+    <input type="button" value="Recherche Google">
+    <input type="button" value="Cours d'anglais pour Silvère">
+  </div>
+    <div class="favorites">
+    <div class="favorite" title="YouTube">
+      <img src="https://www.youtube.com/s/desktop/fe7f13ee/img/favicon_144x144.png" alt="YouTube">
+      <span>Créativité</span>
+    </div>
+    <div class="favorite" title="Reddit">
+      <img src="https://www.redditstatic.com/desktop2x/img/favicon/apple-icon-120x120.png" alt="Reddit">
+      <span>Passion</span>
+    </div>
+    <div class="favorite" title="OpenAI">
+      <img src="https://openai.com/favicon.ico" alt="OpenAI">
+      <span>ChatGPT</span>
+    </div>
+    <div class="favorite" title="Gmail">
+      <img src="https://ssl.gstatic.com/ui/v1/icons/mail/rfr/gmail.ico" alt="Gmail">
+      <span>Travail d'équipe</span>
+    </div>
+    <div class="favorite" title="GitHub">
+      <img src="https://github.githubassets.com/favicons/favicon-dark.png" alt="GitHub">
+      <span>Liberté</span>
+    </div>
+  </div>
+
+</div>
+
+<script>
+  const tabContainer = document.getElementById('tabs');
+
+  const favicons = [
+    'https://cdn-icons-png.flaticon.com/128/415/415733.png',
+    'https://cdn-icons-png.flaticon.com/128/415/415733.png',
+    'https://cdn-icons-png.flaticon.com/128/415/415733.png',
+    'https://cdn-icons-png.flaticon.com/128/415/415733.png',
+    'https://cdn-icons-png.flaticon.com/128/415/415733.png',
+    'https://cdn-icons-png.flaticon.com/128/415/415733.png',
+    'https://cdn-icons-png.flaticon.com/128/415/415733.png',
+    'https://cdn-icons-png.flaticon.com/128/415/415733.png',
+    'https://cdn-icons-png.flaticon.com/128/415/415733.png',
+    'https://cdn-icons-png.flaticon.com/128/415/415733.png',
+    'https://cdn-icons-png.flaticon.com/128/415/415733.png',
+    'https://cdn-icons-png.flaticon.com/128/415/415733.png',
+    'https://cdn-icons-png.flaticon.com/128/415/415733.png',
+    'https://cdn-icons-png.flaticon.com/128/415/415733.png',
+    'https://cdn-icons-png.flaticon.com/128/415/415733.png',
+  ];
+
+  const titles = [
+    'Ange', 'Anthony', 'Antoine', 'Benoit', 'Denis', 'Eddy', 'Guillaume',
+    'Jimmy', 'Kathy', 'Pierre', 'Quentin', 'Remi', 'Silvère',
+    'Thomas', 'William',
+  ];
+
+  for (let i = 0; i < 15; i++) {
+    const tab = document.createElement('div');
+    tab.className = 'tab';
+    tab.innerHTML = `<img src="${favicons[i]}" alt="icon"><span>${titles[i]}</span>`;
+    tabContainer.appendChild(tab);
+  }
+</script>
+
+</body>
+</html>
